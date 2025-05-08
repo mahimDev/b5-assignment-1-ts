@@ -2,15 +2,12 @@ const formatString = (value1: string, toUpper: boolean = true): string => {
   return toUpper ? value1.toLocaleUpperCase() : value1.toLocaleLowerCase();
 };
 
-//
 type BookObj = { title: string; rating: number };
 const filterByRating = (items: BookObj[]): BookObj[] =>
   items.filter((item) => item.rating >= 4);
 
-//
 const concatenateArrays = <T>(...array: T[][]): T[] => array.flat();
 
-//
 class Vehicle {
   private make: string;
   private year: number;
@@ -38,11 +35,9 @@ class Car extends Vehicle {
   }
 }
 
-//
 const processValue = (value: string | number): number =>
   typeof value === "string" ? value.length : value * 2;
 
-//
 interface Product {
   name: string;
   price: number;
@@ -54,8 +49,6 @@ const getMostExpensiveProduct = (products: Product[]): Product | null => {
     current.price > max.price ? current : max
   );
 };
-
-//
 
 enum Day {
   Monday,
@@ -74,7 +67,6 @@ const getDayType = (day: Day): string => {
   return "Weekday";
 };
 
-//
 const squareAsync = async (num: number): Promise<number> => {
   if (num < 0) {
     throw new Error("Negative number not allowed");
